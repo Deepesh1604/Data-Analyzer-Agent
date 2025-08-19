@@ -75,7 +75,8 @@ onMounted(() => {
 <style scoped>
 .parking-lots-view h2 {
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: white;
+  font-weight: 600;
 }
 
 .no-lots {
@@ -91,7 +92,7 @@ onMounted(() => {
 }
 
 .lot-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c6690ff 0%, #5b476eff 100%);
   color: white;
   padding: 1.5rem;
   border-radius: 12px;

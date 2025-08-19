@@ -119,7 +119,8 @@ onMounted(() => {
 <style scoped>
 .my-reservations h2 {
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: white;
+  font-weight: 600;
 }
 
 .no-reservations {
@@ -149,11 +150,20 @@ onMounted(() => {
 }
 
 .reservation-card {
-  background-color: white;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e9ecef;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reservation-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(100, 181, 246, 0.15);
 }
 
 .reservation-header {
@@ -165,7 +175,8 @@ onMounted(() => {
 
 .reservation-header h3 {
   margin: 0;
-  color: #2c3e50;
+  color: white;
+  font-weight: 600;
 }
 
 .status-badge {
@@ -176,29 +187,32 @@ onMounted(() => {
 }
 
 .status-badge.active {
-  background-color: #d4edda;
-  color: #155724;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(102, 187, 106, 0.15) 100%);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 .status-badge.completed {
-  background-color: #d1ecf1;
-  color: #0c5460;
+  background: linear-gradient(135deg, rgba(100, 181, 246, 0.2) 0%, rgba(25, 118, 210, 0.15) 100%);
+  color: #64B5F6;
+  border: 1px solid rgba(100, 181, 246, 0.3);
 }
 
 .status-badge.expired {
-  background-color: #f8d7da;
-  color: #721c24;
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.2) 0%, rgba(239, 83, 80, 0.15) 100%);
+  color: #F44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
 }
 
 .reservation-details p {
   margin: 0.5rem 0;
-  color: #495057;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .parking-details {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .reservation-actions {

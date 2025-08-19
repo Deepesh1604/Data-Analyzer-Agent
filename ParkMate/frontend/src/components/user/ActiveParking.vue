@@ -164,7 +164,8 @@ onUnmounted(() => {
 <style scoped>
 .active-parking h2 {
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: white;
+  font-weight: 600;
 }
 
 .no-active-parking {
@@ -194,11 +195,21 @@ onUnmounted(() => {
 }
 
 .parking-session {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parking-session:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(100, 181, 246, 0.15);
 }
 
 .session-header {
@@ -211,6 +222,8 @@ onUnmounted(() => {
 .session-header h3 {
   margin: 0;
   font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
 
 .timer-display {
@@ -237,10 +250,17 @@ onUnmounted(() => {
 }
 
 .detail-item {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.75rem;
-  border-radius: 6px;
+  border-radius: 8px;
   backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .session-actions {
@@ -260,23 +280,27 @@ onUnmounted(() => {
 }
 
 .park-btn {
-  background-color: #28a745;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .park-btn:hover {
-  background-color: #218838;
+  background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
 .release-btn {
-  background-color: #dc3545;
+  background: linear-gradient(135deg, #F44336 0%, #d32f2f 100%);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .release-btn:hover {
-  background-color: #c82333;
+  background: linear-gradient(135deg, #d32f2f 0%, #F44336 100%);
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
 }
 
 .session-progress {
@@ -284,7 +308,8 @@ onUnmounted(() => {
 }
 
 .progress-bar {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   height: 8px;
   border-radius: 4px;
   overflow: hidden;
@@ -293,7 +318,7 @@ onUnmounted(() => {
 
 .progress-fill {
   height: 100%;
-  background-color: #28a745;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
   transition: width 0.3s ease;
 }
 

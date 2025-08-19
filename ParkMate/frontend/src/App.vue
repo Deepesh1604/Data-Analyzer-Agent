@@ -48,34 +48,7 @@ onUnmounted(() => {
 <template>
   <div id="app">
     <!-- Glass Morphism Navbar -->
-    <header class="navbar-header">
-      <nav class="navbar">
-        <div class="navbar-container">
-          <RouterLink to="/" class="navbar-brand">
-            <div class="logo-icon">🅿️</div>
-            <span class="brand-text">ParkMate</span>
-          </RouterLink>
-          
-          <div class="navbar-menu" :class="{ 'active': isMenuOpen }">
-            <RouterLink to="/login" class="nav-link" @click="closeMenu">
-              <span class="nav-text">Login</span>
-              <div class="nav-glow"></div>
-            </RouterLink>
-            <RouterLink to="/register" class="nav-link nav-link-primary" @click="closeMenu">
-              <span class="nav-text">Register</span>
-              <div class="nav-glow"></div>
-            </RouterLink>
-          </div>
-          
-          <!-- Mobile Menu Toggle -->
-          <button class="mobile-toggle" @click="toggleMenu" :class="{ 'active': isMenuOpen }">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </nav>
-    </header>
+    
 
     <!-- Main Content -->
     <main class="main-content">

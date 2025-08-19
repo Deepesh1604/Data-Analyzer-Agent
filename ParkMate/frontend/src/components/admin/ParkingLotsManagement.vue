@@ -219,7 +219,7 @@ onMounted(() => {
 }
 
 .create-lot-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6f80cfff 0%, #764ba2 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;

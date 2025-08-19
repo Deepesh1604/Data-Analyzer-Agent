@@ -18,7 +18,11 @@
     <div class="register-container">
       <div class="register-card">
         <div class="card-header">
-            <h1 class="brand-title">ParkMate</h1>
+          <div class="logo-section">
+            <router-link to="/" class="logo-link">
+              <h1 class="brand-title">🚗 ParkMate</h1>
+            </router-link>
+          </div>
           <h2 class="register-title">Create Account</h2>
           <p class="register-subtitle">Join ParkMate and start your smart parking journey</p>
         </div>
@@ -404,6 +408,25 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 24px rgba(79, 172, 254, 0.3);
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.logo-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .brand-title {
