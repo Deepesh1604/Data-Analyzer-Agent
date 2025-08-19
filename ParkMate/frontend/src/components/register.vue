@@ -222,7 +222,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 /* Background Animation (same as login/home) */
@@ -359,7 +359,7 @@ onMounted(() => {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 480px;
+  max-width: 450px;
 }
 
 /* Register Card */
@@ -368,7 +368,7 @@ onMounted(() => {
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
-  padding: 3rem 2.5rem;
+  padding: 2rem 2rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transition: var(--transition-smooth);
 }
@@ -381,7 +381,7 @@ onMounted(() => {
 /* Card Header */
 .card-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .logo-section {
@@ -435,7 +435,7 @@ onMounted(() => {
 }
 
 .form-group {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .form-label {
@@ -462,7 +462,7 @@ onMounted(() => {
 
 .form-input {
   width: 100%;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1rem;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -509,13 +509,13 @@ onMounted(() => {
 
 /* Form Actions */
 .form-actions {
-  margin: 2rem 0;
+  margin: 1.5rem 0 1rem;
 }
 
 .register-btn {
   position: relative;
   width: 100%;
-  padding: 1.25rem;
+  padding: 1rem;
   background: var(--success-gradient);
   border: none;
   border-radius: 12px;
@@ -665,15 +665,28 @@ onMounted(() => {
 /* Responsive Design */
 @media (max-width: 480px) {
   .register-page {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
   }
   
   .register-card {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .card-header {
+    margin-bottom: 1rem;
   }
   
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.875rem;
+  }
+  
+  .form-input {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.95rem;
+  }
+  
+  .form-actions {
+    margin: 1rem 0 0.5rem;
   }
   
   .logo-icon {
